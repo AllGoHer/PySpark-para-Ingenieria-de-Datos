@@ -148,7 +148,9 @@ Abajo, spark-worker-2 con su puerto 8082:8081.
 
 Ahora El Ejecutor, ve a bash o tu terminal y ejecuta el siguiente comando:
     
-docker exec -it spark-worker-1 /opt/spark/bin/pyspark --master spark://spark-master:7077
+                                                                           docker exec -it spark-worker-1 /opt/spark/bin/pyspark --master spark://spark-master:7077
+
+
 
 Verás que aparece la consola de PySpark (>>>).
 
