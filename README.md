@@ -122,9 +122,11 @@ Ahora, asegúrate de que tu terminal esté dentro de la carpeta spark-docker (la
 
 Ejecuta este comando:
 
-bash
+bash:
 
-docker-compose up -d
+      docker-compose up -d
+
+
 
 (El -d es para que corra en segundo plano).
 
