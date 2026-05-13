@@ -32,7 +32,11 @@ Veremos como trabaja PySpark internamente mediante el uso de Docker Desktop y la
 En tu terminal de VS Code, ve a la carpeta donde estás trabajando (ej: C:\Users\User\PySpark).
 
 Crea una carpeta nueva para este proyecto:
-                                           mkdir spark-docker
+
+bash:
+     mkdir spark-docker
+
+
 bash:
       cd spark-docker
 
