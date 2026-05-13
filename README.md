@@ -33,12 +33,15 @@ En tu terminal de VS Code, ve a la carpeta donde estás trabajando (ej: C:\Users
 
 Crea una carpeta nueva para este proyecto:
 
-bash:
-     mkdir spark-docker
+Bash:
+     
+      mkdir spark-docker
 
 
-bash:
-      cd spark-docker
+Bash:
+       cd spark-docker
+
+
 
 Paso 2: Crear el archivo "Receta" (docker-compose.yml)
 
