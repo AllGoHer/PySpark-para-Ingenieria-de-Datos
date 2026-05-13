@@ -42,7 +42,7 @@ Yaml:
 
       services:
   
-  spark-master:
+      spark-master:
     
     image: apache/spark:3.5.1
     container_name: spark-master
