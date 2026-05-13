@@ -13,7 +13,7 @@ En el recorrido de PySpark para ingenieros de datos, veremos:
 • Cómo encaja PySpark en los sistemas reales de ingeniería de datos
 ______________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-#**PySpark**
+# **PySpark**
 ## Enlace con Docker
 Veremos como trabaja PySpark internamente mediante el uso de Docker Desktop y la interface de usuario de Spark (http://localhost:4040).
 
