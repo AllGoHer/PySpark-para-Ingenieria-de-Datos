@@ -1,17 +1,25 @@
 # PySpark-para-Ingenieria-de-Datos
-______________________________________________________________________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________
 En el recorrido de PySpark para ingenieros de datos, veremos:
 
 • Cómo funciona Spark internamente (arquitectura y modelo de ejecución)
-• Cómo trabajar con DataFrames, esquemas y Spark SQL
-• Cómo leer y escribir datos a gran escala (CSV, JSON, Parquet)
-• Transformaciones, acciones y evaluación diferida
-• Manejo de datos desordenados y del mundo real en Spark
-• Uniones, agregaciones, funciones de ventana y análisis
-• Ajuste del rendimiento, partición y optimización
-• Escritura de pipelines de PySpark listos para producción
-• Cómo encaja PySpark en los sistemas reales de ingeniería de datos
-______________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+• Cómo trabajar con DataFrames, esquemas y Spark SQL.
+
+• Cómo leer y escribir datos a gran escala (CSV, JSON, Parquet).
+
+• Transformaciones, acciones y evaluación diferida.
+
+• Manejo de datos desordenados y del mundo real en Spark.
+
+• Uniones, agregaciones, funciones de ventana y análisis.
+
+• Ajuste del rendimiento, partición y optimización.
+
+• Escritura de pipelines de PySpark listos para producción.
+
+• Cómo encaja PySpark en los sistemas reales de ingeniería de datos.
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 # **PySpark**
 ## Enlace con Docker
