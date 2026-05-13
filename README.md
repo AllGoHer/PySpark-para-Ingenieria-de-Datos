@@ -41,7 +41,9 @@ Yaml
 version: "3.8"
 
 services:
+  
   spark-master:
+    
     image: apache/spark:3.5.1
     container_name: spark-master
     hostname: spark-master
