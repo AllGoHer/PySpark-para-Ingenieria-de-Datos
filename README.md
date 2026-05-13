@@ -162,9 +162,13 @@ Ahora para verificar vamos al localhost:4040 en tu navegador.
 
 Ahora hagamos unos ejercicios para ver como funciona 
 
->>> data = [(i % 10, i) for i in range(1_000_000)]
->>> df = spark.createDataFrame(data, ['key', 'value'])
->>> df.show()
+PowerShell:
+
+            >>> data = [(i % 10, i) for i in range(1_000_000)]
+            >>> df = spark.createDataFrame(data, ['key', 'value'])
+            >>> df.show()
+
+
 
 Se mostrará lo siguiente:
 
