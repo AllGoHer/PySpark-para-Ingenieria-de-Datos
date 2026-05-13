@@ -58,7 +58,6 @@ Yaml:
     volumes:
       - ./apps:/opt/spark-apps
       - ./data:/opt/spark-data
-
   spark-worker-1:
     image: apache/spark:3.5.1
     container_name: spark-worker-1
