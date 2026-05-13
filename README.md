@@ -164,9 +164,9 @@ Ahora hagamos unos ejercicios para ver como funciona
 
 PowerShell:
 
-            >>> data = [(i % 10, i) for i in range(1_000_000)]
-            >>> df = spark.createDataFrame(data, ['key', 'value'])
-            >>> df.show()
+             data = [(i % 10, i) for i in range(1_000_000)]
+             df = spark.createDataFrame(data, ['key', 'value'])
+             df.show()
 
 
 
@@ -174,14 +174,22 @@ Se mostrará lo siguiente:
 
 ![image](https://github.com/user-attachments/assets/e513f729-38ff-4211-b3d2-276696985873)
 
->>> df.count()
+PowerShell:
+
+           df.count()
+
+
 1000000
->>> data = [(i, i * 10) for i in range(1_000_000)]
->>> df = spark.createDataFrame(data, ['id', 'value'])
->>> from pyspark.sql.functions import col
->>> df_filtered = df.filter(col('value') > 5000)
->>> df_select = df_filtered.select('id')
->>> df_select.show()
+
+PowerShell:
+
+           data = [(i, i * 10) for i in range(1_000_000)]
+           df = spark.createDataFrame(data, ['id', 'value'])
+           from pyspark.sql.functions import col
+           df_filtered = df.filter(col('value') > 5000)
+           df_select = df_filtered.select('id')
+           df_select.show()
+
 
 •	ver las acciones o trabajo en puerto desde el navegador 
 
@@ -198,25 +206,34 @@ Aprender a:
 
 Paso 1: Crear un conjunto de datos
 
->>> from pyspark.sql import SparkSession
->>> from pyspark.sql.functions import col
+PowerShell: 
 
->>> spark = SparkSession.builder.getOrCreate()
+           from pyspark.sql import SparkSession
+           from pyspark.sql.functions import col
 
->>> data = [(i % 5, i) for i in range(1_000_000)]
+           spark = SparkSession.builder.getOrCreate()
 
->>> df = spark.createDataFrame(data, ["category", "value"])
+           data = [(i % 5, i) for i in range(1_000_000)]
+
+           df = spark.createDataFrame(data, ["category", "value"])
+
 
 •	Step 2: Define Transformaciones (No Ejecución)
 
->>> result_df = (
-       df.filter(col("value") > 1000)
-       .groupBy("category")
-       .count()
-)
+PowerShell: 
+            
+            result_df = (
+            df.filter(col("value") > 1000)
+            .groupBy("category")
+            .count()
+             )
+
 
 •	Step 3: Inspección del plan físico 
-              >>> result_df.explain(mode="formatted")
+
+PowerShell: 
+
+            result_df.explain(mode="formatted")
 
 Observa:
 •    Operador de intercambio
@@ -232,23 +249,33 @@ Ahora revisamos que tenga la misma estructura física en localhost:4040 en la pe
 ![image](https://github.com/user-attachments/assets/dd4b1e26-4527-4c05-8de7-7b386a9f4277)
 ![image](https://github.com/user-attachments/assets/fb2bf927-10bf-4928-b723-b0bd80769ed1)
 
->>> result_df.show()
+
+PowerShell:
+
+            result_df.show()
+            
 
 ![image](https://github.com/user-attachments/assets/199c9803-6f38-4463-895c-5ff66cb73436)
 
 3 — DATA INGESTION WITH PYSPARK
+
 3.1.	Creación de archivo CSV con Spark
+
 Corre el siguiente código en PySpark Shell.
 
->>> data = [(1, 'Mya', '2026-05-05'), (2, 'Allan', '2026-05-03'), (3, 'Kevin', '2026-05-01')]
->>> df_source = spark.createDataFrame(data, ['id', 'name', 'signup_date'])
->>> df_source.write.mode("overwrite").option("header", "true").csv("/opt/spark-                                                                                                                                          
-        data/users_csv")
+PowerShell:
+
+            data = [(1, 'Mya', '2026-05-05'), (2, 'Allan', '2026-05-03'), (3, 'Kevin', '2026-05-01')]
+            df_source = spark.createDataFrame(data, ['id', 'name', 'signup_date'])
+            df_source.write.mode("overwrite").option("header", "true").csv("/opt/spark-data/users_csv")                                                                                                
+        
 
 •	Directorio
+
 ![image](https://github.com/user-attachments/assets/493c5587-353c-4842-b5ae-c0939f3a75c2)
 
 •	Spark UI (Jobs)
+
 ![image](https://github.com/user-attachments/assets/bbe57ad1-0aaa-4b72-a5ca-14197da71af9)
 
 ![image](https://github.com/user-attachments/assets/177cc9f4-24ff-4283-98cd-080a7c02b871)
@@ -259,9 +286,12 @@ Muestra el ID de etapa y el ID de tarea que corresponden a la métrica máxima
 
 ![image](https://github.com/user-attachments/assets/b5753357-f4a5-489c-ba8e-adaff6b569a1)
 
->>> df = spark.read.format('csv').option('header', 'true').option('infraSchema', 
-        'true').load('/opt/spark-data/users_csv')
->>> df.show()
+
+PowerShell:
+
+           df = spark.read.format('csv').option('header', 'true').option('infraSchema','true').load('/opt/spark-data/users_csv') 
+        
+           df.show()
 
 ![image](https://github.com/user-attachments/assets/dab5b924-b439-4a9b-8499-32c93f888d64)
 
